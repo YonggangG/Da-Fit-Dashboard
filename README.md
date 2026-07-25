@@ -211,4 +211,4 @@ ghcr.io/yonggangg/da-fit-dashboard:v0.1.0
 
 ## License
 
-Private/home project release. Add a license file before redistributing beyond personal use.
+MIT License. See [LICENSE](LICENSE).
