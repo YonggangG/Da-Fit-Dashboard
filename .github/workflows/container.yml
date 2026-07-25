@@ -11,7 +11,7 @@ permissions:
   packages: write
 
 env:
-  IMAGE_NAME: ghcr.io/${{ github.repository_owner }}/da-fit-dashboard
+  IMAGE_NAME: ghcr.io/yonggangg/da-fit-dashboard
 
 jobs:
   container:
