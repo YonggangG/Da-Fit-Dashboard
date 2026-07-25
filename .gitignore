@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+*.sqlite3
+*.db
+.venv/
+data/
+dist/
+build/
+*.tar.gz
+.DS_Store

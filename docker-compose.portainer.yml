@@ -1,0 +1,19 @@
+services:
+  dafit-health-dashboard:
+    image: ghcr.io/yonggangg/da-fit-dashboard:latest
+    container_name: dafit-health-dashboard
+    restart: unless-stopped
+    user: "1000:1000"
+    ports:
+      - "8088:8080"
+    environment:
+      DAFIT_DATA_DIR: /data
+      DAFIT_ADMIN_PASSWORD: "change-this-admin-password"
+    volumes:
+      - /home/xin/docker/dafit-health-dashboard:/data
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8080/health', timeout=3).read()"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 15s
