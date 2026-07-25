@@ -29,11 +29,27 @@ It is designed for local/home use and does not require root access to the Androi
 - Incremental import semantics so old history is not overwritten by later exports.
 - Python standard library only at runtime; no pip install is required inside the image.
 
-## Screenshots and Development Report
+## Screenshots
 
-A detailed development report with screenshots is published here:
+### Login
 
-<https://w.claw.holocat.com/dafit-health-dashboard-container-report-2026-07-24.html>
+![Login page](docs/screenshots/login-page.png)
+
+### Dashboard
+
+![Dashboard desktop view](docs/screenshots/dashboard-desktop.png)
+
+### Heart Rate Trend
+
+![Heart rate trend](docs/screenshots/heart-trend.png)
+
+### User Management
+
+![User management](docs/screenshots/user-management.png)
+
+### Mobile View
+
+![Mobile dashboard](docs/screenshots/mobile-dashboard.png)
 
 ## Quick Start with Docker
 
