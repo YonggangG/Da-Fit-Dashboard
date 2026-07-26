@@ -18,6 +18,7 @@ It is designed for local/home use and does not require root access to the Androi
   - selected auxiliary tables such as blood oxygen, weight, water, and goals.
 - Dashboard cards and charts filtered by metric month.
 - SVG trend charts with hover values for bars and line points.
+- Daily heart-rate curve view from DA FIT's per-day `HEART_RATE` samples, with zero-value sensor dropouts shown separately.
 - Sleep date selector with DA FIT-style sleep ratio and sleep stage timeline.
 - Monthly activity ring calendar for every month with data.
 - Month-aware health suggestions.
@@ -180,6 +181,8 @@ DA FIT exports contain more than one steps field:
 
 The dashboard uses `sport.STEPS` for the main steps card and trend chart, while showing the Daily Health value as context when it differs.
 
+Daily heart-rate curves use the raw `heart_rate.HEART_RATE` array from each DA FIT daily heart-rate record. Values above zero are drawn as the heart-rate line; zero values are treated as missing sensor readings and are shown as bottom markers rather than real heart-rate measurements.
+
 ## User Profile Rules
 
 When a ZIP is uploaded, the app extracts health profile fields for the current logged-in user:
@@ -206,6 +209,7 @@ Container images are published to GitHub Container Registry:
 
 ```text
 ghcr.io/yonggangg/da-fit-dashboard:latest
+ghcr.io/yonggangg/da-fit-dashboard:v0.2.0
 ghcr.io/yonggangg/da-fit-dashboard:v0.1.0
 ```
 
