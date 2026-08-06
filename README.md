@@ -217,6 +217,8 @@ This 0–100 daily score is not the clinical PSQI. The official PSQI is a 19-ite
 
 The Daily Health Report panel is generated from DA FIT's `daily_health_entity` rows. Each selectable report keeps DA FIT's own `TOTAL_SCORE`, `GRADE`, metric goals, metric statuses, report date, and generated timestamp, then enriches the text with seven-day averages from the normalized dashboard tables where available. The copy button copies the generated report text for posting elsewhere.
 
+DA FIT exports only the latest `daily_health_entity`, so dates without a preserved official report receive a clearly labeled **Website estimate** when at least one normalized metric is available. The estimate combines only available values: steps (35% target weight), sleep duration (30%), heart-rate range (15%), and stress (20%), then renormalizes the weights when a metric is missing. Calories may be displayed when present but are not scored separately. Official DA FIT rows always take precedence for the same date, and estimated cards/text never claim an official DA FIT grade, generation time, or sleep-quality score.
+
 DA FIT's raw `ATTENTION` grade is displayed as `Needs Improvement (ATTENTION)` so the dashboard matches the wording shown in the app while preserving the exported status code.
 
 ## User Profile Rules
