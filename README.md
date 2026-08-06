@@ -6,6 +6,19 @@ The app lets you upload `Dafit_HealthExport_xxx.zip` exports from the DA FIT And
 
 It is designed for local/home use and does not require root access to the Android phone.
 
+## What's New in v0.3.0
+
+Since v0.2.0, this release adds:
+
+- Calendar-based navigation for reports, heart rate, sleep, metric months, and activity rings. Only dates or months with data are selectable, while navigation can still cross empty months to reach older records.
+- More reliable DA FIT calendar-day mapping for travel and timezone changes, including Daily Health anchors, archive-boundary inference, sparse weather bridging, and de-duplication of competing timezone markers.
+- Correct sleep-date handling using DA FIT's wake-up-day convention, plus sleep-window heart-rate averages that match DA FIT's integer truncation.
+- Four compact quick-access buttons for the newest Daily Health Reports, with older reports available from the calendar.
+- Clearly labeled Website Estimated Health Summaries for historical dates that do not have an exported official `daily_health_entity` report. Official DA FIT reports always take precedence.
+- Stronger mobile refresh behavior and cache prevention so newly imported or restored dates appear without closing the browser tab.
+
+See the [v0.3.0 release](https://github.com/YonggangG/Da-Fit-Dashboard/releases/tag/v0.3.0) for the complete release notes.
+
 ## Features
 
 - Upload DA FIT personal data exports as `.zip`, `.txt`, or `.json`.
